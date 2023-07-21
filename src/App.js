@@ -15,14 +15,14 @@ function App() {
       title:'Bike Insuranse',
       amount:186.34,
       LocationOfExpenditure:'Mumbai',
-      date: new Date(2020,8,14),
+      date: new Date(2021,8,14),
     },
     {
       id:'e3',
       title:'Home Insuranse',
       amount:3006.34,
       LocationOfExpenditure:'Hydrabad',
-      date: new Date(2020,9,14),
+      date: new Date(2022,9,14),
     },
   ]
   return (
