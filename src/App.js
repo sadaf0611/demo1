@@ -29,13 +29,14 @@ function App() {
     <div>
       <h2>Lets get start</h2>
       {
+        // for 100 expense we can apply same loop.
         expenses.map((ele)=>{
           console.log(ele.title);
           return <ExpenceItem title={ele.title} loc={ele.LocationOfExpenditure} amount={ele.amount} date={ele.date}/>
         })
       }
-      {/* <ExpenceItem title={expenses[0].title} loc={expenses[0].LocationOfExpenditure} amount={expenses[0].amount} date={expenses[0].date}/> */}
-      {/* <ExpenceItem title={expenses[1].title} loc={expenses[1].LocationOfExpenditure} amount={expenses[1].amount} date={expenses[1].date}/>
+      {/* <ExpenceItem title={expenses[0].title} loc={expenses[0].LocationOfExpenditure} amount={expenses[0].amount} date={expenses[0].date}/> 
+      <ExpenceItem title={expenses[1].title} loc={expenses[1].LocationOfExpenditure} amount={expenses[1].amount} date={expenses[1].date}/>
       <ExpenceItem title={expenses[2].title} loc={expenses[2].LocationOfExpenditure} amount={expenses[2].amount} date={expenses[2].date}/> */}
     </div>
   );
