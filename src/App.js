@@ -1,5 +1,6 @@
 import ExpenceItem from './components/ExpenceItem';
 import './App.css';
+import React, { createElement } from 'react';
 
 function App() {
   const expenses=[
@@ -27,7 +28,7 @@ function App() {
   ]
   return (
     <div>
-      <h2>Lets get start</h2>
+      {/* <h2>Lets get start</h2> */}
       {
         // for 100 expense we can apply same loop.
         expenses.map((ele)=>{

@@ -2,7 +2,7 @@ import React from 'react'
 import './ExpenceItem.css'
 import ExpenseDate from './ExpenseDate'
 import ExpenseDetails from './ExpenseDetails'
-export default function ExpenceItem(props) {
+const ExpenceItem = (props) => {
     // const expenseDate = new Date(2021, 2, 28);
     // const expenseTitle='Car Insuranse'
     // const expenseAmount=294.86;
@@ -22,3 +22,4 @@ export default function ExpenceItem(props) {
     </div>
   )
 }
+export default ExpenceItem
