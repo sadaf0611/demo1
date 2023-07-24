@@ -35,7 +35,7 @@ function App() {
   ]
   return (
     <div>
-        <AddExpense/>
+        {/* <AddExpense/> */}
       {/* <h2>Lets get start</h2> */}
       {
         // for 100 expense we can apply same loop.

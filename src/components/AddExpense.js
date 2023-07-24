@@ -3,56 +3,45 @@ import ExpenceItem from './ExpenceItem'
 import './ExpenceItem.css'
 export default function AddExpense() {
 
-  // const [userInput,setUserInput] =useState({
-  //   enteredDate: '',
-  //   enteredTitle: '',
-  //   enteredLocation:'',
-  //   EneterdAmount:'',
-  // })
+  const [userInput,setUserInput] =useState({
+    enteredDate: '',
+    enteredTitle: '',
+    enteredLocation:'',
+    EneterdAmount:'',
+  })
   
-  // const DateChange = (event) =>{
-  //   setUserInput({
-  //     ...userInput,
-  //     enteredDate: event.target.value,
-  //   })
-  // };
+  const DateChange = (event) =>{
+    setUserInput({
+      ...userInput,
+      enteredDate: event.target.value,
+    })
+  };
 
   
-  // const TitleChange = (event) =>{
-  //   setUserInput({
-  //     ...userInput,
-  //     enteredTitle: event.target.value,
-  //   })
-  // };
+  const TitleChange = (event) =>{
+    setUserInput({
+      ...userInput,
+      enteredTitle: event.target.value,
+    })
+  };
 
   
-  // const LocationChange = (event) =>{
-  //   setUserInput({
-  //     ...userInput,
-  //     enteredLocation: event.target.value,
-  //   })
-  // };
+  const LocationChange = (event) =>{
+    setUserInput({
+      ...userInput,
+      enteredLocation: event.target.value,
+    })
+  };
   
-  // // const [amountChange, setAmountChange] = useState('')
-  // const AmountChange = (event) =>{
-  //   setUserInput({
-  //     ...userInput,
-  //     enteredAmont: event.target.value,
-  //   })
-  // };
+  // const [amountChange, setAmountChange] = useState('')
+  const AmountChange = (event) =>{
+    setUserInput({
+      ...userInput,
+      enteredAmont: event.target.value,
+    })
+  };
 
-const TitleChange= (event) =>{
-  console.log(event.target.value);
-}
-const AmountChange= (event) =>{
-  console.log(event.target.value);
-}
-const LocationChange= (event) =>{
-  console.log(event.target.value);
-}
-const DateChange= (event) =>{
-  console.log(event.target.value);
-}
+
 
 
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createElement } from 'react'
 
 export default function ExpenseDetails(props) {
   return (
@@ -8,4 +8,10 @@ export default function ExpenseDetails(props) {
       <div className="expense-item__price">${props.amount}</div>
     </div>
   )
+  // return React.createElement('div',{},
+  //   React.createElement('h2',null,{props.title}),
+  //   React.createElement('h2',{},{props.loc}),
+  //   React.createElement('div',{className="expense-item__price"},{props.amount})
+  
+  // )
 }
