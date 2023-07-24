@@ -13,11 +13,7 @@ const ExpenceItem = (props) => {
     setAmount(amount+100);
     // console.log(title);
   };
-    
-
-
-
-
+  
   return (
     <div className='expense-item'>
         <ExpenseDate date={props.date}/>

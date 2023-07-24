@@ -1,7 +1,7 @@
 import ExpenceItem from './components/ExpenceItem';
 import './App.css';
 import React, { createElement } from 'react';
-
+import AddExpense from './components/AddExpense'
 function App() {
   const expenses=[
     {
@@ -32,16 +32,10 @@ function App() {
       LocationOfExpenditure:'Hydrabad',
       date: new Date(2022,9,14),
     },
-    {
-      id:'e5',
-      title:'Business Insuranse',
-      amount:400,
-      LocationOfExpenditure:'Hydrabad',
-      date: new Date(2022,9,14),
-    },
   ]
   return (
     <div>
+        <AddExpense/>
       {/* <h2>Lets get start</h2> */}
       {
         // for 100 expense we can apply same loop.
