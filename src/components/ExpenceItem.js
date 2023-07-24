@@ -1,25 +1,35 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './ExpenceItem.css'
 import ExpenseDate from './ExpenseDate'
 import ExpenseDetails from './ExpenseDetails'
+
+
 const ExpenceItem = (props) => {
-    // const expenseDate = new Date(2021, 2, 28);
-    // const expenseTitle='Car Insuranse'
-    // const expenseAmount=294.86;
-    // const LocationOfExpenditure='Pune'
-   
+
+  // const [title,setTitle]=useState(props.title);
+  const [amount,setAmount]=useState(props.amount);
+  const clickHandler = () =>{
+    // setTitle('updated');
+    setAmount(amount+100);
+    // console.log(title);
+  };
+    
+
+
+
+
   return (
     <div className='expense-item'>
         <ExpenseDate date={props.date}/>
         <div className='expense-item__description'>
-          <ExpenseDetails title={props.title} loc={props.loc} amount={props.amount} />
-            {/* <h2></h2>
-            <h2></h2>
-            <div className='expense-item__price'>$</div>
-             */}
+          {/* <ExpenseDetails title={props.title} loc={props.loc} amount={props.amount} /> */}
+            <h2>{props.title}</h2>
+            <h2>{props.loc}</h2>
+            <div className='expense-item__price'>${amount}</div>
+          <button onClick={clickHandler}>Add $100 to amount</button>  
         </div>
-  
+          
     </div>
   )
 }
-export default ExpenceItem
+export default ExpenceItem  

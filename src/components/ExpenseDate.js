@@ -12,4 +12,10 @@ export default function ExpenseDate(props) {
         <div>{Day}</div>
     </div>
   )
+
+  // return React.createElement('div',{},
+  //   React.createElement('div',{},{month}),
+  //   React.createElement('div',{},{Year}),
+  //   React.createElement('div',{},{Day}),
+  // );
 }

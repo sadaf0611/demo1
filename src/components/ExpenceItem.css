@@ -22,16 +22,16 @@
 .expense-item__description{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    align-items: flex-end;
-    flex-flow: column-reverse;
-    justify-content: flex-start;
+    /* gap: 1rem; */
+    /* align-items: flex-end; */
+    /* flex-flow: column-reverse;
+    justify-content: flex-start; */
 }
 .expense-item__description h2{
     margin-left: 10px;
     color: white;
     font-weight: 500;
-    
+    /* justify-content: space-betweenx; */
     
 }
 .expense-item__price{

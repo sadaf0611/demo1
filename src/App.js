@@ -7,21 +7,35 @@ function App() {
     {
       id:'e1',
       title:'car Insuranse',
-      amount:286.34,
+      amount:200,
       LocationOfExpenditure:'Pune',
       date: new Date(2020,7,14),
     },
     {
       id:'e2',
       title:'Bike Insuranse',
-      amount:186.34,
+      amount:100,
       LocationOfExpenditure:'Mumbai',
       date: new Date(2021,8,14),
     },
     {
       id:'e3',
       title:'Home Insuranse',
-      amount:3006.34,
+      amount:300,
+      LocationOfExpenditure:'Hydrabad',
+      date: new Date(2022,9,14),
+    },
+    {
+      id:'e4',
+      title:'Life Insuranse',
+      amount:300,
+      LocationOfExpenditure:'Hydrabad',
+      date: new Date(2022,9,14),
+    },
+    {
+      id:'e5',
+      title:'Business Insuranse',
+      amount:400,
       LocationOfExpenditure:'Hydrabad',
       date: new Date(2022,9,14),
     },
@@ -32,7 +46,6 @@ function App() {
       {
         // for 100 expense we can apply same loop.
         expenses.map((ele)=>{
-          console.log(ele.title);
           return <ExpenceItem title={ele.title} loc={ele.LocationOfExpenditure} amount={ele.amount} date={ele.date}/>
         })
       }
