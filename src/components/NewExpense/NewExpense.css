@@ -1,0 +1,16 @@
+.add-expense{
+    margin: 5px;
+}
+.add-expense input{
+    margin: 5px;
+}
+.add-expense button{
+    padding: 5px;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+
+}
+

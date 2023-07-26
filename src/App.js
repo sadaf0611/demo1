@@ -1,7 +1,9 @@
-import ExpenceItem from './components/ExpenceItem';
+import ExpenceItem from './components/Expenses/ExpenceItem';
 import './App.css';
 import React, { createElement } from 'react';
-import AddExpense from './components/AddExpense'
+import ExpenseForm from './components/NewExpense/ExpenseForm'
+import NewExpense from './components/NewExpense/NewExpense';
+import Expense from './components/Expenses/Expense';
 function App() {
   const expenses=[
     {
@@ -33,19 +35,22 @@ function App() {
       date: new Date(2022,9,14),
     },
   ]
+
+  const addExpenseHandler = expense =>{
+    console.log('in app.js file');
+    console.log(expense) ;
+  }
   return (
     <div>
-        <AddExpense/>
-      {/* <h2>Lets get start</h2> */}
-      {
+        <NewExpense onAddExpense={addExpenseHandler}/>
+        <Expense items={expenses}/>
+      {/* {
         // for 100 expense we can apply same loop.
         expenses.map((ele)=>{
           return <ExpenceItem title={ele.title} loc={ele.LocationOfExpenditure} amount={ele.amount} date={ele.date}/>
         })
-      }
-      {/* <ExpenceItem title={expenses[0].title} loc={expenses[0].LocationOfExpenditure} amount={expenses[0].amount} date={expenses[0].date}/> 
-      <ExpenceItem title={expenses[1].title} loc={expenses[1].LocationOfExpenditure} amount={expenses[1].amount} date={expenses[1].date}/>
-      <ExpenceItem title={expenses[2].title} loc={expenses[2].LocationOfExpenditure} amount={expenses[2].amount} date={expenses[2].date}/> */}
+      } */}
+      
     </div>
   );
 }
