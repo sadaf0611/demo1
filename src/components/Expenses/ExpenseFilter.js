@@ -4,8 +4,6 @@ const ExpenseFilter = (props) => {
     const dropdownChangeHandler = (event) =>{
         props.onChangeFilter(event.target.value);
     }
-
-
   return (
     <div className='expense-filter'>
         <div className='expense-filter__control'>
