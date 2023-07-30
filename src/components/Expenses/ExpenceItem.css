@@ -1,3 +1,10 @@
+body{
+    color: aliceblue;
+    
+}
+p{
+    margin:2px;
+}
 .expenses{
     padding: 1rem;
     background-color: rgb(31,31,31);
