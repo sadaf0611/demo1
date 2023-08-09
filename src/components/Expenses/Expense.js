@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import ExpenceItem from './ExpenceItem'
-import ExpenseFilter from './ExpenseFilter'
 
+import ExpenseFilter from './ExpenseFilter'
+import ExpensesList from './ExpensesList'
 
 const Expense = (props) => { 
-  const [filteredYear,setFilteredYear]= useState('2020');
+  const [filteredYear,setFilteredYear]= useState('2022');
 
   const filterChangeHandler = selectedYear =>{
     setFilteredYear(selectedYear); 
@@ -14,27 +14,13 @@ const Expense = (props) => {
     return expense.date.getFullYear().toString()===filteredYear;
   })
 
-  let expensesContent =   <p>NO data available</p>;
-  if(filteredExpense.length>0){
-     expensesContent=(filteredExpense.map((expense)=>(
-        
-      <ExpenceItem  
-      key = {expense.id}
-      title={expense.title} 
-      loc={expense.LocEx} 
-      amount={expense.amount} 
-      date={expense.date}  />
-    )
-  ));
-  }
-
   return (
     <div className='expenses'>
       <ExpenseFilter 
       selected={filteredYear} 
       onChangeFilter={filterChangeHandler}/>
       
-      {expensesContent}  
+      <ExpensesList items={filteredExpense}/>
     </div>
   )
 }

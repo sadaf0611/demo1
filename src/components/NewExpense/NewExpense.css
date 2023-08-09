@@ -1,16 +1,51 @@
-.add-expense{
+.wrapper{
+    margin: 25px;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    background-color: gray;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease  ,height .2s ease;
+}
+.wrapper .active{
+    transform: scale(1);
+}
+.wrapper input{
     margin: 5px;
 }
-.add-expense input{
-    margin: 5px;
-}
-.add-expense button{
-    padding: 5px;
+.wrapper button{
+    padding: 10px;
     border: none;
     background-color: blueviolet;
     color: white;
     font-weight: 600;
     border-radius: 4px;
+    margin-right: 10px;
 
 }
+.wrapper button:hover{
+    background-color: rgb(85, 13, 152);
+}
+.add-new-container button{
+    position: relative;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,150%);
+}
 
+.wrapper{
+
+}
+.container-form{
+    background-color: gray;
+    padding: 5px;
+    text-align  : center;
+}
+.cancel{
+    margin-left: 5px;
+}

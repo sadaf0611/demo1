@@ -15,6 +15,7 @@ const ExpenceItem = (props) => {
   };
   
   return (
+    <li>
     <div className='expense-item'>
         <ExpenseDate date={props.date}/>
         <div className='expense-item__description'>
@@ -26,6 +27,7 @@ const ExpenceItem = (props) => {
         </div>
           
     </div>
+    </li>
   )
 }
 export default ExpenceItem  

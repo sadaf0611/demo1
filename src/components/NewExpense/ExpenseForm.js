@@ -8,12 +8,6 @@ const  ExpenseForm = (props) =>
   const [enteredDate,setEnteredDate]=useState('');
   const [enteredLocation,setEnteredLocation]=useState('');
   const [enteredAmount,setEneterdAmount]=useState('');
-  // const [userInput,setUserInput] =useState({
-  //   enteredDate: '',
-  //   enteredTitle: '',
-  //   enteredLocation:'',
-  //   EneterdAmount:'',
-  // })
   
   const DateChange = (event) =>{
     setEnteredDate(event.target.value);
@@ -44,17 +38,31 @@ const  ExpenseForm = (props) =>
     setEneterdAmount('');
   };
 
-  return (
-    <div className='add-expense'>
-      <h2>Add Expense</h2>
-      <form onSubmit={submitHandler}>
-        <input type='date' value={enteredDate} min='2019-01-01' max='2022-12-31' placeholder='date' id='date'onChange={DateChange}/>
-        <input type='text' value={enteredTitle} placeholder='title' id='title' onChange={TitleChange}/>
-        <input type='text' value={enteredLocation} placeholder='location' id='location' onChange={LocationChange}/>
-        <input type='number' value={enteredAmount} placeholder='amount' id='amount' onChange={AmountChange}/>
-        <button type='submit'>Submit</button>
-      </form>
-    </div>
-  );
+
+const  [isFormOpened, setIsFormOpened] = useState(false);
+
+const ShowAddForm = () =>{
+  return(
+      <div className='add-expense container-form'>
+        <h2>Add Expense</h2>
+        <form onSubmit={submitHandler}>
+          <input type='date' value={enteredDate} min='2019-01-01' max='2022-12-31' placeholder='date' id='date'onChange={DateChange}/>
+          <input type='text' value={enteredTitle} placeholder='title' id='title' onChange={TitleChange}/>
+          <input type='text' value={enteredLocation} placeholder='location' id='location' onChange={LocationChange}/>
+          <input type='number' value={enteredAmount} placeholder='amount' id='amount' onChange={AmountChange}/>
+          <button type='submit' onClick={()=>{setIsFormOpened(false)}}>Submit</button>
+          <button className='cancel' onClick={()=>{setIsFormOpened(false)}}>Cancel</button>
+        </form>
+      </div>
+    );
+}
+
+return(
+  <div className='add-expense container-form'>
+    {isFormOpened?<ShowAddForm/>:<button  onClick={()=>{setIsFormOpened(true)}}>Add Expense</button>}
+  </div>
+)
+
+  
 }
 export default ExpenseForm

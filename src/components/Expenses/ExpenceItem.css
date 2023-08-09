@@ -69,3 +69,15 @@ p{
 
 }
 
+/* .h2-found-no-expense{
+    color: white;
+    font-size: 25px;
+} */
+.expense-list{
+    list-style: none;
+    padding: 0;
+}
+.expense-list__fallback{
+    color: white;
+    text-align:center;
+}
