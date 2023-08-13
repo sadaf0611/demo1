@@ -25,7 +25,7 @@ const DUMMY_EXPENSE=[
     title:'Home Insuranse',
     amount:300,
     LocEx:'Hydrabad',
-    date: new Date(2022,9,14),
+    date: new Date(2022,10,14),
   },
   {
     id:'e4',

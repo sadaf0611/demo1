@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import ExpenceItem from '../Expenses/ExpenceItem'
 import './NewExpense.css'
 
 const  ExpenseForm = (props) =>
@@ -16,7 +15,7 @@ const  ExpenseForm = (props) =>
     setEnteredTitle(event.target.value);
   };
   const LocationChange = (event) =>{
-    setEnteredLocation(event.target.value);
+      setEnteredLocation(event.target.value);
   };
   const AmountChange = (event) =>{
     setEneterdAmount(event.target.value);
@@ -38,10 +37,6 @@ const  ExpenseForm = (props) =>
     setEneterdAmount('');
   };
 
-
-const  [isFormOpened, setIsFormOpened] = useState(false);
-
-const ShowAddForm = () =>{
   return(
       <div className='add-expense container-form'>
         <h2>Add Expense</h2>
@@ -50,19 +45,10 @@ const ShowAddForm = () =>{
           <input type='text' value={enteredTitle} placeholder='title' id='title' onChange={TitleChange}/>
           <input type='text' value={enteredLocation} placeholder='location' id='location' onChange={LocationChange}/>
           <input type='number' value={enteredAmount} placeholder='amount' id='amount' onChange={AmountChange}/>
-          <button type='submit' onClick={()=>{setIsFormOpened(false)}}>Submit</button>
-          <button className='cancel' onClick={()=>{setIsFormOpened(false)}}>Cancel</button>
+          <button type='submit'>Submit</button>
+          <button className='cancel' type='button' onClick={props.onCancel}>Cancel</button>
         </form>
       </div>
-    );
-}
-
-return(
-  <div className='add-expense container-form'>
-    {isFormOpened?<ShowAddForm/>:<button  onClick={()=>{setIsFormOpened(true)}}>Add Expense</button>}
-  </div>
-)
-
-  
+    );  
 }
 export default ExpenseForm
